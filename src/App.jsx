@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { supabase } from "./supabase.js";
 
 const GFONTS = "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap";
 
@@ -3221,6 +3222,36 @@ export default function App() {
     document.body.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
+  // ── Supabase auth: check existing session on load
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) {
+        supabase.from("profiles").select("*").eq("id", session.user.id).single()
+          .then(({ data }) => {
+            if (data) {
+              setUserProfile(data);
+              setShowOnboarding(false);
+            }
+          });
+        supabase.from("clubs").select("*").eq("user_id", session.user.id).single()
+          .then(({ data }) => {
+            if (data) {
+              setClubProfile(data);
+              setShowClubOnboarding(false);
+            }
+          });
+      }
+    });
+    supabase.auth.onAuthStateChange((_event, session) => {
+      if (!session) {
+        setUserProfile(null);
+        setShowOnboarding(true);
+        setShowClubOnboarding(true);
+        setAppMode(null);
+      }
+    });
+  }, []);
+
   useEffect(() => {
     const t = setTimeout(() => setSplash(false), 2200);
     return () => clearTimeout(t);
@@ -3321,7 +3352,30 @@ export default function App() {
       return (
         <>
           <style>{STYLES}</style>
-          <ClubOnboarding onDone={(clubData) => {
+          <ClubOnboarding onDone={async (clubData) => {
+            // Supabase sign up for club
+            if (clubData?.email) {
+              const password = Math.random().toString(36).slice(-10) + "Aa1!";
+              const { data, error } = await supabase.auth.signUp({
+                email: clubData.email,
+                password,
+              });
+              if (!error && data?.user) {
+                await supabase.from("clubs").insert({
+                  user_id: data.user.id,
+                  club_name: clubData.clubName,
+                  sport: clubData.sport,
+                  type: clubData.type,
+                  address: clubData.address,
+                  city: clubData.city,
+                  email: clubData.email,
+                  phone: clubData.phone,
+                  contact_prenom: clubData.contactPrenom,
+                  contact_nom: clubData.contactNom,
+                  status: "pending",
+                });
+              }
+            }
             setClubProfile(clubData);
             setShowClubOnboarding(false);
           }}/>
@@ -3363,7 +3417,7 @@ export default function App() {
               <div className="hmenu-item" onClick={()=>setDarkMode(d=>!d)}>
                 <span className="hmenu-item-ico">{darkMode?"☀️":"🌙"}</span> {darkMode?"Mode clair":"Mode sombre"}
               </div>
-              <div className="hmenu-item" style={{color:"#EF4444"}} onClick={()=>setAppMode(null)}>
+              <div className="hmenu-item" style={{color:"#EF4444"}} onClick={()=>{supabase.auth.signOut();setAppMode(null);}}>
                 <span className="hmenu-item-ico">🔄</span> Déconnexion
               </div>
             </div>
@@ -3382,15 +3436,37 @@ export default function App() {
     return (
       <>
         <style>{STYLES}</style>
-        <Onboarding onDone={(profile) => {
+        <Onboarding onDone={async (profile) => {
+          // Supabase sign up
+          if (profile?.email && profile?.password) {
+            const { data, error } = await supabase.auth.signUp({
+              email: profile.email,
+              password: profile.password,
+            });
+            if (!error && data?.user) {
+              await supabase.from("profiles").upsert({
+                id: data.user.id,
+                prenom: profile.prenom,
+                nom: profile.nom,
+                email: profile.email,
+                phone: profile.phone,
+                adresse: profile.adresse,
+                genre: profile.genre,
+                dob: profile.dob,
+                sport: profile.sports?.[0] || null,
+                objective: profile.objective,
+                freq: profile.freq,
+                medical: profile.medical || [],
+              });
+            }
+          }
           setShowOnboarding(false);
           if (profile) {
             setUserProfile(profile);
-            const sportName = profile.sports[0]?.split(" ").slice(0,-1).join(" ");
+            const sportName = profile.sports?.[0]?.split(" ").slice(0,-1).join(" ");
             if (sportName && SPORTS.includes(sportName)) setFilters(f=>({...f,sport:sportName}));
-            if (profile.health.includes("pmr") || profile.medical?.includes("handicap")) setFilters(f=>({...f,pmr:true}));
-            if (profile.health.includes("postPartum") || profile.medical?.includes("postPartum")) setFilters(f=>({...f,postPartum:true}));
-            if (profile.genre === "F") setFilters(f=>({...f}));
+            if (profile.medical?.includes("handicap")) setFilters(f=>({...f,pmr:true}));
+            if (profile.medical?.includes("postPartum")) setFilters(f=>({...f,postPartum:true}));
           }
         }}/>
       </>
@@ -3469,7 +3545,7 @@ export default function App() {
           <div className="hmenu-item" onClick={()=>{setDarkMode(d=>!d)}}>
             <span className="hmenu-item-ico">{darkMode?"☀️":"🌙"}</span> {darkMode?"Mode clair":"Mode sombre"}
           </div>
-          <div className="hmenu-item" style={{color:"#EF4444"}} onClick={()=>setAppMode(null)}>
+          <div className="hmenu-item" style={{color:"#EF4444"}} onClick={()=>{supabase.auth.signOut();setAppMode(null);}}>
             <span className="hmenu-item-ico">🔄</span> Déconnexion
           </div>
         </div>
