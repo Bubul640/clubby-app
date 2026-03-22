@@ -771,7 +771,7 @@ function Onboarding({ onDone }) {
 
   const next = () => {
     if (step < total - 1) setStep(s => s + 1);
-    else onDone({ prenom, nom, dob, email, phone, adresse, genre, medical, avatar, sports, objective, freq, health });
+    else onDone({ prenom, nom, dob, email, phone, adresse, genre, medical, avatar, sports, objective, freq, health, password });
   };
 
   const avatarInitials = (prenom[0]||"?").toUpperCase() + (nom[0]||"").toUpperCase();
