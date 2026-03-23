@@ -1339,8 +1339,8 @@ function FilterDrawer({ filters, onChange, onClose, resultCount }) {
   const set = (k,v) => setLocal(f=>({...f,[k]:v}));
   const toggleArr = (k,v) => setLocal(f=>({...f,[k]:f[k].includes(v)?f[k].filter(x=>x!==v):[...f[k],v]}));
   const activeCount = [
-    local.sport!=="Tous",local.city!=="Toutes",
-    local.indoor!==null, local.outdoor!==null,
+    local.sport!=="Tous", local.city!=="Toutes",
+    local.indoor!==null,
     local.budget<500, local.levels.length>0, local.ambiance!==null,
     local.essaiGratuit, local.pmr, local.postPartum, local.womenOnly,
     local.parentEnfant, local.tarifEtudiant, local.tarifSenior, local.tarifFamille,
@@ -1352,7 +1352,7 @@ function FilterDrawer({ filters, onChange, onClose, resultCount }) {
       <div className="drawer" onClick={e=>e.stopPropagation()}>
         <div className="dr-handle"/>
         <div className="dr-head">
-          <div className="dr-title">Filtres {activeCount>0&&<span style={{color:"var(--co)",marginLeft:4}}>{activeCount}</span>}</div>
+          <div className="dr-title">Filtres {activeCount>0 && <span style={{color:"var(--co)",marginLeft:4}}>{activeCount}</span>}</div>
           <button className="dr-reset" onClick={()=>setLocal({sport:"Tous",city:"Toutes",budget:500,levels:[],ambiance:null,indoor:null,essaiGratuit:false,pmr:false,postPartum:false,womenOnly:false,parentEnfant:false,tarifEtudiant:false,tarifSenior:false,tarifFamille:false,coachPerso:false})}>Réinitialiser</button>
         </div>
         <div className="fg">
@@ -1703,14 +1703,127 @@ function CalendarView({ planning, onCancelPlan, showToast }) {
   );
 }
 
-function ProfilePage({ favs, history, planning, onToggleFav, onOpenClub, onCancelPlan, userProfile, showToast, ratings, onRate }) {
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━ EDIT PROFILE MODAL ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function EditProfileModal({ userProfile, onSave, onClose }) {
+  const [step, setStep] = useState(0);
+  const total = 3;
+
+  const [sports,    setSports]    = useState(userProfile?.sports || []);
+  const [objective, setObjective] = useState(userProfile?.objective || null);
+  const [freq,      setFreq]      = useState(userProfile?.freq || null);
+  const [health,    setHealth]    = useState(userProfile?.health || []);
+
+  const healthOptions = [
+    {id:"pmr",      icon:"♿", label:"Accessibilité PMR",   sub:"Handicap moteur ou fauteuil roulant"},
+    {id:"postPartum",icon:"🤱",label:"Post-partum",         sub:"Reprise après accouchement"},
+    {id:"grossesse", icon:"🤰",label:"Grossesse",            sub:"Activité pendant la grossesse"},
+    {id:"senior",    icon:"👴",label:"Senior (65+)",         sub:"Cours adaptés à mon âge"},
+    {id:"none",      icon:"👍",label:"Aucune condition",     sub:"Je pratique sans contrainte particulière"},
+  ];
+
+  const toggleSport  = s => setSports(p => p.includes(s) ? p.filter(x=>x!==s) : [...p, s]);
+  const toggleHealth = h => setHealth(p => p.includes(h) ? p.filter(x=>x!==h) : [...p, h]);
+
+  const STEP_LABELS = ["Sport", "Objectif", "Fréquence & profil"];
+
+  return (
+    <div style={{position:"fixed",top:0,left:0,right:0,bottom:0,background:"var(--white)",zIndex:300,display:"flex",flexDirection:"column",fontFamily:"var(--font)"}}>
+      {/* Header */}
+      <div style={{position:"sticky",top:0,background:"var(--white)",borderBottom:"1px solid var(--border)",padding:"14px 20px",display:"flex",alignItems:"center",gap:12,zIndex:10}}>
+        <button onClick={onClose} style={{width:36,height:36,borderRadius:10,border:"1.5px solid var(--border)",background:"var(--bg)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",fontSize:16,flexShrink:0}}>←</button>
+        <div>
+          <div style={{fontSize:15,fontWeight:800,color:"var(--text)"}}>Personnaliser mon profil</div>
+          <div style={{fontSize:11,color:"var(--text2)"}}>{STEP_LABELS[step]} · étape {step+1}/{total}</div>
+        </div>
+        {/* Progress */}
+        <div style={{marginLeft:"auto",display:"flex",gap:5}}>
+          {Array.from({length:total},(_,i)=>(
+            <div key={i} style={{width:i===step?20:6,height:6,borderRadius:3,background:i<=step?"var(--tq)":"var(--border)",transition:"all .3s"}}/>
+          ))}
+        </div>
+      </div>
+
+      {/* Body */}
+      <div style={{flex:1,overflowY:"auto",padding:"28px 20px 120px"}}>
+
+        {/* Step 0 — Sport */}
+        {step===0 && <>
+          <h2 className="ob-title">Quel sport te <em>correspond</em> ?</h2>
+          <p className="ob-sub">Sélectionne un ou plusieurs sports.</p>
+          <div className="ob-sports-grid">
+            {ONBOARDING_SPORTS.map(s => {
+              const parts=s.split(" "); const ico=parts.pop(); const nm=parts.join(" ");
+              return (
+                <button key={s} className={`ob-sport-btn${sports.includes(s)?" on":""}`} onClick={()=>toggleSport(s)}>
+                  <span className="ob-sport-ico">{ico}</span>
+                  <span className="ob-sport-name">{nm}</span>
+                </button>
+              );
+            })}
+          </div>
+        </>}
+
+        {/* Step 1 — Objectif */}
+        {step===1 && <>
+          <h2 className="ob-title">Quel est ton <em>objectif</em> ?</h2>
+          <p className="ob-sub">On adapte les recommandations à ta motivation.</p>
+          <div className="ob-obj-grid">
+            {OBJECTIVES.map(o => (
+              <button key={o.id} className={`ob-obj-btn${objective===o.id?" on":""}`} onClick={()=>setObjective(o.id)}>
+                <span className="ob-obj-ico">{o.icon}</span>
+                <span className="ob-obj-label">{o.label}</span>
+              </button>
+            ))}
+          </div>
+        </>}
+
+        {/* Step 2 — Fréquence + profil */}
+        {step===2 && <>
+          <h2 className="ob-title">Combien de fois <em>par semaine</em> ?</h2>
+          <p className="ob-sub">Ça nous aide à filtrer les clubs selon leur planning.</p>
+          <div className="ob-freq-list" style={{marginBottom:28}}>
+            {FREQ_OPTIONS.map(f => (
+              <button key={f} className={`ob-freq-btn${freq===f?" on":""}`} onClick={()=>setFreq(f)}>{f}</button>
+            ))}
+          </div>
+          <h2 className="ob-title" style={{fontSize:18}}>Profil <em>spécifique</em> ?</h2>
+          <p className="ob-sub">Optionnel — on activera les filtres adaptés.</p>
+          <div className="ob-health-list">
+            {healthOptions.map(h => (
+              <button key={h.id} className={`ob-health-btn${health.includes(h.id)?" on":""}`} onClick={()=>toggleHealth(h.id)}>
+                <span className="ob-health-ico">{h.icon}</span>
+                <div><div className="ob-health-label">{h.label}</div><div className="ob-health-sub">{h.sub}</div></div>
+              </button>
+            ))}
+          </div>
+        </>}
+      </div>
+
+      {/* Footer */}
+      <div style={{position:"fixed",bottom:0,left:0,right:0,background:"var(--white)",borderTop:"1px solid var(--border)",padding:"14px 20px 28px",display:"flex",gap:10,justifyContent:"center"}}>
+        <div style={{display:"flex",gap:10,width:"100%",maxWidth:520}}>
+          {step>0 && <button className="ob-back" onClick={()=>setStep(s=>s-1)}>← Retour</button>}
+          {step<total-1
+            ? <button className="ob-next" style={{flex:1}} onClick={()=>setStep(s=>s+1)}>Suivant →</button>
+            : <button className="ob-next" style={{flex:1}} onClick={()=>onSave({sports, objective, freq, health})}>
+                ✅ Enregistrer mon profil
+              </button>
+          }
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProfilePage({ favs, history, planning, onToggleFav, onOpenClub, onCancelPlan, userProfile, showToast, ratings, onRate, onUpdateProfile }) {
   const favClubs = CLUBS.filter(c=>favs.includes(c.id));
   const weekdays = ["Lun","Mar","Mer","Jeu","Ven","Sam","Dim"];
   const today = new Date().getDay();
   const todayIdx = today === 0 ? 6 : today - 1;
   const weekProgress = planning.length;
   const streakDays = weekdays.map((d,i)=>({day:d,done:i<todayIdx,today:i===todayIdx}));
-  const [ratingTarget, setRatingTarget] = useState(null); // club history item
+  const [ratingTarget, setRatingTarget] = useState(null);
+  const [showEditProfile, setShowEditProfile] = useState(false); // club history item
 
   return (
     <div className="profile-page">
@@ -1730,7 +1843,7 @@ function ProfilePage({ favs, history, planning, onToggleFav, onOpenClub, onCance
             {userProfile?.objective ? userProfile.objective : "Objectif non défini"}{userProfile?.freq ? ` · ${userProfile.freq}` : ""}
           </div>
         </div>
-        <button className="profile-edit" onClick={()=>showToast("✏️ Édition du profil bientôt disponible")}>Modifier</button>
+        <button className="profile-edit" onClick={()=>setShowEditProfile(true)}>Modifier</button>
       </div>
 
       <div className="profile-section">
@@ -1741,8 +1854,8 @@ function ProfilePage({ favs, history, planning, onToggleFav, onOpenClub, onCance
             <div className="prog-lbl">Cours planifiés</div>
           </div>
           <div className="prog-card">
-            <div className="prog-num" style={{color:"var(--co)"}}>{favs.length}</div>
-            <div className="prog-lbl">Clubs sauvegardés</div>
+            <div className="prog-num" style={{color:"var(--co)"}}>{[...new Set(history.map(h=>h.id))].length}</div>
+            <div className="prog-lbl">Clubs découverts</div>
           </div>
         </div>
         <div style={{background:"#fff",border:"1.5px solid var(--border)",borderRadius:12,padding:14,marginBottom:8}}>
@@ -1876,6 +1989,18 @@ function ProfilePage({ favs, history, planning, onToggleFav, onOpenClub, onCance
             showToast("⭐ Avis enregistré, merci !");
           }}
           onClose={()=>setRatingTarget(null)}
+        />
+      )}
+
+      {showEditProfile && (
+        <EditProfileModal
+          userProfile={userProfile}
+          onClose={()=>setShowEditProfile(false)}
+          onSave={(updated)=>{
+            onUpdateProfile(updated);
+            setShowEditProfile(false);
+            showToast("✅ Profil mis à jour !");
+          }}
         />
       )}
     </div>
@@ -2318,7 +2443,7 @@ function ProPage({ showToast, onShowProLanding, clubProfile }) {
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━ APP ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━ FILTER BAR ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-function FilterBar({ filters, setFilters, activeFiltersCount, onOpenDrawer }) {
+function FilterBar({ filters, setFilters, activeFiltersCount, onOpenDrawer, onResetFilters }) {
   const [openCat, setOpenCat] = useState(null);
   const toggle = (cat) => setOpenCat(c => c === cat ? null : cat);
 
@@ -2347,6 +2472,11 @@ function FilterBar({ filters, setFilters, activeFiltersCount, onOpenDrawer }) {
         <button className="filter-btn-sm" onClick={onOpenDrawer} style={{flexShrink:0}}>
           ⚙️ {activeFiltersCount>0&&<span className="fcnt" style={{marginLeft:4}}>{activeFiltersCount}</span>}
         </button>
+        {activeFiltersCount>0 && (
+          <button onClick={onResetFilters} style={{flexShrink:0,padding:"6px 12px",borderRadius:100,fontSize:11,fontWeight:700,background:"rgba(239,68,68,0.08)",border:"1.5px solid rgba(239,68,68,0.25)",color:"#EF4444",cursor:"pointer",whiteSpace:"nowrap",fontFamily:"var(--font)"}}>
+            ✕ Tout effacer
+          </button>
+        )}
         <div style={{width:"1px",height:24,background:"var(--border)",flexShrink:0,margin:"0 2px"}}/>
         {CATS.map(cat=>(
           <button key={cat.id}
@@ -3315,8 +3445,10 @@ export default function App() {
     if (k==="city") return v!=="Toutes";
     if (k==="budget") return v<500;
     if (k==="levels") return v.length>0;
-    if (typeof v === "boolean") return v;
-    return v!==null;
+    if (k==="ambiance") return v!==null;
+    if (k==="indoor") return v!==null;
+    if (typeof v === "boolean") return v===true;
+    return false;
   }).length;
 
   const hasSearched = searchQuery.trim() !== "" || activeFiltersCount > 0;
@@ -3586,7 +3718,7 @@ export default function App() {
           </div>
         )}
 
-        <FilterBar filters={filters} setFilters={setFilters} activeFiltersCount={activeFiltersCount} onOpenDrawer={()=>setShowDrawer(true)}/>
+        <FilterBar filters={filters} setFilters={setFilters} activeFiltersCount={activeFiltersCount} onOpenDrawer={()=>setShowDrawer(true)} onResetFilters={()=>{setFilters(DEFAULT_FILTERS);setSearchQuery("");}}/>
 
         <div className="results-bar">
           <div className="results-count"><em>{activeFiltersCount>0||searchQuery.trim()?filtered.length:"300+"}</em> club{filtered.length!==1?"s":""} trouvé{filtered.length!==1?"s":""}</div>
@@ -3657,6 +3789,7 @@ export default function App() {
           showToast={showToast}
           ratings={ratings}
           onRate={(clubId, stars, comment)=>setRatings(r=>({...r,[clubId]:{stars,comment}}))}
+          onUpdateProfile={(updated)=>setUserProfile(p=>({...p,...updated}))}
         />
       )}
 
