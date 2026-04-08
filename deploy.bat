@@ -2,7 +2,7 @@
 echo.
 echo  Deploiement Clubby en cours...
 echo.
-cd /d "C:\Projet\ECOLE\startup clubby\clubby-app"
+cd /d "D:\projet\clubby-app"
 git add .
 git commit -m "Mise a jour Clubby"
 git push

@@ -19,7 +19,7 @@ const CLUBS = [
   { id:12, name:"Swim Academy Issy", city:"Issy-les-Moulineaux", arrondissement:"Hauts-de-Seine", sport:"Natation", emoji:"🏊", type:"Privé", indoor:true, rating:4.8, reviews:211, priceMin:120, priceMax:220, priceUnit:"mois", priceCourse:20, essaiGratuit:true, tarifEtudiant:false, tarifSenior:true, tarifFamille:true, womenOnly:false, pmr:true, postPartum:true, parentEnfant:true, ambiance:"bien-être", levels:["Débutant","Intermédiaire","Avancé"], features:["Bassin 25m chauffé","Cours adultes & enfants","Aquabike","Balnéo","Vestiaires","Parking"], labels:["PMR ♿","Post-partum 🤱","Essai gratuit ✓","Tarif famille"], trendBadge:"Nouveau", courses:[{name:"Nage perfectionnement",level:"Intermédiaire",duration:60,maxPeople:8,price:20,spotsLeft:3,equipment:"Bonnet + lunettes",language:"Français"},{name:"Aquabike",level:"Débutant",duration:45,maxPeople:12,price:18,spotsLeft:4,equipment:"Maillot + bonnet",language:"Français"},{name:"Bébé nageur (4-36 mois)",level:"Débutant",duration:30,maxPeople:6,price:25,spotsLeft:2,equipment:"Couche piscine",language:"Français"}], coaches:[{name:"Lucie Vidal",title:"MNS + Coach sportif",certif:"BEESAN + BNSSA",languages:["Français","Anglais"],initials:"LV"}], schedule:{"Lun":["07:00","09:00","12:00","17:00","19:00"],"Mar":["07:00","09:00","17:00","19:00"],"Mer":["07:00","09:00","14:00","17:00"],"Jeu":["07:00","09:00","12:00","17:00","19:00"],"Ven":["07:00","09:00","12:00","17:00","19:00"],"Sam":["08:00","09:30","11:00"],"Dim":["09:00","10:30"]}, cancelPolicy:"Annulation gratuite jusqu'à 24h avant. Crédit automatique.", socialLinks:{instagram:"@swimacademyissy",facebook:"SwimAcademyIssy"}, description:"Centre de natation premium à Issy-les-Moulineaux avec bassin 25m chauffé toute l'année. Aquabike, bébé nageur, cours adultes. Accès PMR et post-partum spécialisé.", image:"https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80", lat:48.823, lng:2.271, accentColor:"#38BDF8", tags:["Post-partum","Famille","Premium"], address:"30 Rue du Général Leclerc, 92130 Issy-les-Moulineaux", phone:"01 46 XX XX XX", email:"hello@swimacademy-issy.fr", openHours:"7h - 21h30 tous les jours" },
   { id:13, name:"Danse Studio Oberkampf", city:"Paris", arrondissement:"11e", sport:"Danse", emoji:"💃", type:"Privé", indoor:true, rating:4.9, reviews:278, priceMin:70, priceMax:130, priceUnit:"mois", priceCourse:16, essaiGratuit:true, tarifEtudiant:true, tarifSenior:false, tarifFamille:false, womenOnly:false, pmr:false, postPartum:false, parentEnfant:false, ambiance:"loisirs", levels:["Débutant","Intermédiaire","Avancé"], features:["Salle avec miroirs","Parquet flottant","Salsa","Hip-hop","Bachata","Vestiaires"], labels:["Essai gratuit ✓","Tarif étudiant"], trendBadge:"Tendance", courses:[{name:"Salsa Débutant",level:"Débutant",duration:60,maxPeople:14,price:16,spotsLeft:6,equipment:"Chaussures à semelle lisse",language:"Français / Espagnol"},{name:"Bachata Sensual",level:"Intermédiaire",duration:60,maxPeople:10,price:18,spotsLeft:3,equipment:"Chaussures de danse",language:"Français"},{name:"Hip-Hop Urban",level:"Tous niveaux",duration:60,maxPeople:16,price:16,spotsLeft:8,equipment:"Sneakers propres",language:"Français"}], coaches:[{name:"María González",title:"Professeure certifiée",certif:"Diplôme fédéral Danse",languages:["Français","Espagnol","Anglais"],initials:"MG"},{name:"Kevin Diop",title:"Chorégraphe hip-hop",certif:"Formation FFMDA",languages:["Français"],initials:"KD"}], schedule:{"Lun":["12:00","18:30","20:00"],"Mar":["18:30","20:00"],"Mer":["12:00","18:30","20:00"],"Jeu":["18:30","20:00"],"Ven":["12:00","18:30","20:00"],"Sam":["10:00","11:30","14:00","15:30"],"Dim":["10:00","11:30"]}, cancelPolicy:"Annulation jusqu'à 6h avant. Cours non annulé = cours décompté.", socialLinks:{instagram:"@dansestudiooberkampf",facebook:"DanseStudioOberkampf"}, description:"Studio de danse convivial dans le 11e avec cours de salsa, bachata et hip-hop. Professeurs passionnés, ambiance festive, idéal pour débutants comme confirmés.", image:"https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80", lat:48.864, lng:2.375, accentColor:"#EC4899", tags:["Festif","Couple","Débutant ok"], address:"56 Rue Oberkampf, 75011 Paris", phone:"01 43 XX XX XX", email:"hello@danse-oberkampf.fr", openHours:"Lun-Ven 12h-22h / Sam-Dim 10h-18h" },
   { id:14, name:"Gym Plus Neuilly", city:"Neuilly-sur-Seine", arrondissement:"Hauts-de-Seine", sport:"Gym", emoji:"🏋️", type:"Privé", indoor:true, rating:4.6, reviews:332, priceMin:60, priceMax:120, priceUnit:"mois", priceCourse:null, essaiGratuit:true, tarifEtudiant:true, tarifSenior:true, tarifFamille:false, womenOnly:false, pmr:true, postPartum:false, parentEnfant:false, ambiance:"performance", levels:["Débutant","Intermédiaire","Avancé"], features:["Espace cardio 40 machines","Salle de musculation","Cours collectifs","Coach perso","Sauna","Vestiaires"], labels:["PMR ♿","Essai gratuit ✓","Tarif étudiant","Tarif senior"], trendBadge:"Populaire", courses:[{name:"Circuit training",level:"Tous niveaux",duration:45,maxPeople:15,price:null,spotsLeft:5,equipment:"Tenue de sport",language:"Français"},{name:"Body Pump",level:"Débutant",duration:55,maxPeople:20,price:null,spotsLeft:12,equipment:"Tenue + serviette",language:"Français"},{name:"Coaching perso",level:"Tous niveaux",duration:60,maxPeople:1,price:65,spotsLeft:3,equipment:"Tout disponible",language:"Français / Anglais"}], coaches:[{name:"Antoine Roux",title:"Coach certifié STAPS",certif:"Licence STAPS + CF-L1",languages:["Français","Anglais"],initials:"AR"},{name:"Laura Petit",title:"Coach bien-être",certif:"BPJEPS AF",languages:["Français"],initials:"LP"}], schedule:{"Lun":["06:00","07:30","09:00","12:00","17:00","18:30","20:00"],"Mar":["06:00","07:30","12:00","17:00","18:30","20:00"],"Mer":["06:00","07:30","09:00","12:00","17:00","18:30"],"Jeu":["06:00","07:30","12:00","17:00","18:30","20:00"],"Ven":["06:00","07:30","09:00","12:00","17:00","18:30"],"Sam":["08:00","09:30","11:00"],"Dim":["09:00","10:30"]}, cancelPolicy:"Abonnement mensuel sans engagement. Accès libre aux machines 6h-23h.", socialLinks:{instagram:"@gymplusneuilly",facebook:"GymPlusNeuilly"}, description:"Salle de sport complète à Neuilly avec espace cardio, musculation, cours collectifs et coaching personnalisé. Équipements premium, ouverte 7j/7 dès 6h du matin.", image:"https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80", lat:48.885, lng:2.269, accentColor:"#6366F1", tags:["Premium","Coach perso","Cardio"], address:"8 Avenue Charles de Gaulle, 92200 Neuilly-sur-Seine", phone:"01 46 XX XX XX", email:"contact@gymplus-neuilly.fr", openHours:"Lun-Ven 6h-23h / Sam-Dim 8h-21h" },
-  { id:15, name:"Running Club Bois de Vincennes", city:"Paris", arrondissement:"12e", sport:"Running", emoji:"🚴", type:"Association", indoor:false, rating:4.5, reviews:167, priceMin:80, priceMax:120, priceUnit:"an", priceCourse:null, essaiGratuit:true, tarifEtudiant:true, tarifSenior:true, tarifFamille:true, womenOnly:false, pmr:false, postPartum:false, parentEnfant:false, ambiance:"bien-être", levels:["Débutant","Intermédiaire","Avancé"], features:["Entraînements en forêt","Prépa semi-marathon","Séances trail","Groupe WhatsApp","Ravitos"], labels:["Essai gratuit ✓","Tarif étudiant","Tarif senior","Tarif famille"], trendBadge:null, courses:[{name:"Jogging débutant",level:"Débutant",duration:60,maxPeople:25,price:null,spotsLeft:15,equipment:"Chaussures de running",language:"Français"},{name:"Fartlek & VMA",level:"Avancé",duration:75,maxPeople:12,price:null,spotsLeft:4,equipment:"Montre GPS conseillée",language:"Français"},{name:"Sortie trail weekend",level:"Intermédiaire",duration:120,maxPeople:20,price:null,spotsLeft:7,equipment:"Chaussures trail + veste",language:"Français"}], coaches:[{name:"Isabelle Morin",title:"Entraîneur FFA",certif:"Diplôme Entraîneur Athlétisme",languages:["Français"],initials:"IM"}], schedule:{"Lun":[],"Mar":["07:00","19:00"],"Mer":[],"Jeu":["07:00","19:00"],"Ven":[],"Sam":["08:00"],"Dim":["08:30"]}, cancelPolicy:"Inscription annuelle. Aucune réservation nécessaire, présentez-vous au RDV.", socialLinks:{instagram:"@rcboisvincennes",facebook:"RunningClubBoisVincennes"}, description:"Club de running associatif qui s'entraîne dans le Bois de Vincennes. Groupes de niveau, préparation aux courses (10km, semi, marathon), sorties trail le weekend.", image:"https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", lat:48.837, lng:2.432, accentColor:"#10B981", tags:["Outdoor","Nature","Trail"], address:"Entrée Lac Daumesnil, Bois de Vincennes, 75012 Paris", phone:"06 XX XX XX XX", email:"bonjour@rc-vincennes.fr", openHours:"Mar & Jeu 7h/19h · Sam 8h · Dim 8h30" },
+  { id:15, name:"Running Club Bois de Vincennes", city:"Paris", arrondissement:"12e", sport:"Running", emoji:"🏃", type:"Association", indoor:false, rating:4.5, reviews:167, priceMin:80, priceMax:120, priceUnit:"an", priceCourse:null, essaiGratuit:true, tarifEtudiant:true, tarifSenior:true, tarifFamille:true, womenOnly:false, pmr:false, postPartum:false, parentEnfant:false, ambiance:"bien-être", levels:["Débutant","Intermédiaire","Avancé"], features:["Entraînements en forêt","Prépa semi-marathon","Séances trail","Groupe WhatsApp","Ravitos"], labels:["Essai gratuit ✓","Tarif étudiant","Tarif senior","Tarif famille"], trendBadge:null, courses:[{name:"Jogging débutant",level:"Débutant",duration:60,maxPeople:25,price:null,spotsLeft:15,equipment:"Chaussures de running",language:"Français"},{name:"Fartlek & VMA",level:"Avancé",duration:75,maxPeople:12,price:null,spotsLeft:4,equipment:"Montre GPS conseillée",language:"Français"},{name:"Sortie trail weekend",level:"Intermédiaire",duration:120,maxPeople:20,price:null,spotsLeft:7,equipment:"Chaussures trail + veste",language:"Français"}], coaches:[{name:"Isabelle Morin",title:"Entraîneur FFA",certif:"Diplôme Entraîneur Athlétisme",languages:["Français"],initials:"IM"}], schedule:{"Lun":[],"Mar":["07:00","19:00"],"Mer":[],"Jeu":["07:00","19:00"],"Ven":[],"Sam":["08:00"],"Dim":["08:30"]}, cancelPolicy:"Inscription annuelle. Aucune réservation nécessaire, présentez-vous au RDV.", socialLinks:{instagram:"@rcboisvincennes",facebook:"RunningClubBoisVincennes"}, description:"Club de running associatif qui s'entraîne dans le Bois de Vincennes. Groupes de niveau, préparation aux courses (10km, semi, marathon), sorties trail le weekend.", image:"https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", lat:48.837, lng:2.432, accentColor:"#10B981", tags:["Outdoor","Nature","Trail"], address:"Entrée Lac Daumesnil, Bois de Vincennes, 75012 Paris", phone:"06 XX XX XX XX", email:"bonjour@rc-vincennes.fr", openHours:"Mar & Jeu 7h/19h · Sam 8h · Dim 8h30" },
   { id:16, name:"Taekwondo Club Pantin", city:"Pantin", arrondissement:"Seine-Saint-Denis", sport:"Taekwondo", emoji:"🦵", type:"Association", indoor:true, rating:4.6, reviews:112, priceMin:150, priceMax:250, priceUnit:"an", priceCourse:null, essaiGratuit:true, tarifEtudiant:true, tarifSenior:false, tarifFamille:true, womenOnly:false, pmr:false, postPartum:false, parentEnfant:true, ambiance:"performance", levels:["Débutant","Intermédiaire","Avancé","Compétition"], features:["Tatami homologué WTF","Cours enfants & adultes","Poomsae & Kyorugi","Compétitions départementales","Vestiaires"], labels:["Essai gratuit ✓","Tarif étudiant","Parent/enfant","Tarif famille"], trendBadge:"Nouveau", courses:[{name:"Taekwondo 6-14 ans",level:"Débutant",duration:60,maxPeople:18,price:null,spotsLeft:6,equipment:"Dobok fourni essai",language:"Français"},{name:"Adultes tous niveaux",level:"Tous niveaux",duration:90,maxPeople:20,price:null,spotsLeft:9,equipment:"Dobok perso",language:"Français"},{name:"Poomsae compétition",level:"Avancé",duration:90,maxPeople:8,price:null,spotsLeft:1,equipment:"Dobok WTF",language:"Français / Coréen"}], coaches:[{name:"Ji-Ho Park",title:"Ceinture noire 4e dan WT",certif:"BPJEPS + Arbitre international",languages:["Français","Coréen","Anglais"],initials:"JP"}], schedule:{"Lun":["17:00","18:30","20:00"],"Mar":["18:30","20:00"],"Mer":["14:00","16:00","18:00"],"Jeu":["17:00","18:30","20:00"],"Ven":["18:30"],"Sam":["09:00","10:30"],"Dim":[]}, cancelPolicy:"Licence annuelle FFTDA. Toutes les séances sont libres d'accès.", socialLinks:{instagram:"@tkdpantin93",facebook:"TaekwondoClubPantin"}, description:"Club de taekwondo dynamique à Pantin, reconnu World Taekwondo. Cours enfants dès 6 ans et adultes. Poomsae et Kyorugi, compétitions régulières en IDF.", image:"https://images.unsplash.com/photo-1555597673-b21d5c935865?w=800&q=80", lat:48.896, lng:2.403, accentColor:"#EF4444", tags:["Compétition","Enfants","Arts martiaux"], address:"45 Avenue Jean-Lolive, 93500 Pantin", phone:"01 48 XX XX XX", email:"tkd@clubpantin.fr", openHours:"Lun-Sam 17h-22h / Mer 14h-19h" },
   { id:17, name:"Surf & Skate Indoor Paris", city:"Paris", arrondissement:"15e", sport:"Gym", emoji:"🛹", type:"Privé", indoor:true, rating:4.7, reviews:198, priceMin:30, priceMax:60, priceUnit:"séance", priceCourse:30, essaiGratuit:true, tarifEtudiant:true, tarifSenior:false, tarifFamille:false, womenOnly:false, pmr:false, postPartum:false, parentEnfant:true, ambiance:"loisirs", levels:["Débutant","Intermédiaire","Avancé"], features:["Rampes & bowl","Skate électrique","Wave machine","Cours skateboard","Café & lounge","Location matériel"], labels:["Essai gratuit ✓","Tarif étudiant","Parent/enfant"], trendBadge:"Tendance", courses:[{name:"Initiation skate (dès 8 ans)",level:"Débutant",duration:60,maxPeople:8,price:30,spotsLeft:4,equipment:"Casque + protections fournis",language:"Français"},{name:"Bowl & Rampe",level:"Intermédiaire",duration:90,maxPeople:6,price:40,spotsLeft:2,equipment:"Équipement perso ou location",language:"Français / Anglais"},{name:"Balance & Surf training",level:"Tous niveaux",duration:60,maxPeople:10,price:35,spotsLeft:5,equipment:"Chaussures de sport",language:"Français"}], coaches:[{name:"Axel Merlin",title:"Coach certifié skate",certif:"Formation fédérale + BPJEPS",languages:["Français","Anglais"],initials:"AM"}], schedule:{"Lun":["10:00","14:00","18:00"],"Mar":["10:00","14:00","18:00"],"Mer":["10:00","12:00","14:00","16:00","18:00"],"Jeu":["10:00","14:00","18:00"],"Ven":["10:00","14:00","18:00","20:00"],"Sam":["09:00","11:00","14:00","16:00","18:00"],"Dim":["10:00","12:00","14:00","16:00"]}, cancelPolicy:"Annulation jusqu'à 4h avant. Sinon séance facturée 50%.", socialLinks:{instagram:"@surfskateindoor15",facebook:"SurfSkateIndoorParis"}, description:"Espace unique dans le 15e combinant skatepark indoor, wave machine et cours de skateboard. Pour débutants et riders confirmés, esprit fun et communauté bienveillante.", image:"https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&q=80", lat:48.838, lng:2.297, accentColor:"#F59E0B", tags:["Fun","Indoor","Unique"], address:"18 Rue de la Convention, 75015 Paris", phone:"01 45 XX XX XX", email:"ride@surfskate-paris.fr", openHours:"10h - 22h tous les jours" },
   { id:18, name:"Badminton Club Ivry", city:"Ivry-sur-Seine", arrondissement:"Val-de-Marne", sport:"Badminton", emoji:"🏸", type:"Association", indoor:true, rating:4.5, reviews:134, priceMin:160, priceMax:280, priceUnit:"an", priceCourse:null, essaiGratuit:true, tarifEtudiant:true, tarifSenior:true, tarifFamille:true, womenOnly:false, pmr:true, postPartum:false, parentEnfant:true, ambiance:"loisirs", levels:["Débutant","Intermédiaire","Avancé","Compétition"], features:["12 terrains Yonex","Location raquettes","Tournois mensuels","Loisir & compétition","Vestiaires","Parking"], labels:["PMR ♿","Essai gratuit ✓","Tarif famille","Tarif étudiant"], trendBadge:null, courses:[{name:"Initiation badminton",level:"Débutant",duration:90,maxPeople:12,price:null,spotsLeft:7,equipment:"Raquette fournie essai",language:"Français"},{name:"Technique & tactique",level:"Intermédiaire",duration:90,maxPeople:8,price:null,spotsLeft:3,equipment:"Raquette perso conseillée",language:"Français"},{name:"Tournoi interne",level:"Tous niveaux",duration:120,maxPeople:32,price:null,spotsLeft:14,equipment:"Raquette + tenue",language:"Français"}], coaches:[{name:"Nathalie Wu",title:"Joueuse N3 + Entraîneur",certif:"BE1 Badminton FFBaD",languages:["Français","Mandarin"],initials:"NW"}], schedule:{"Lun":["18:00","19:30"],"Mar":["18:00","19:30"],"Mer":["14:00","18:00","19:30"],"Jeu":["18:00","19:30"],"Ven":["18:00","19:30"],"Sam":["09:00","10:30","14:00"],"Dim":["10:00"]}, cancelPolicy:"Licence annuelle FFBaD. Accès libre aux terrains selon disponibilité.", socialLinks:{instagram:"@badminton_ivry94",facebook:"BadmintonClubIvry"}, description:"Club de badminton convivial à Ivry avec 12 terrains. Loisirs et compétition, enfants et adultes, tournois mensuels. L'un des plus grands clubs d'IDF.", image:"https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80", lat:48.813, lng:2.387, accentColor:"#1AC7C1", tags:["Tournois","Famille","Indoor"], address:"Gymnase Joliot-Curie, 94200 Ivry-sur-Seine", phone:"01 46 XX XX XX", email:"contact@badminton-ivry.fr", openHours:"Lun-Ven 18h-22h / Mer 14h-22h / Sam-Dim 9h-17h" },
@@ -31,7 +31,7 @@ const SPORTS = ["Tous","Tennis","Padel","Yoga","Boxe","Natation","Escalade","Pil
 const CITIES = ["Toutes","Paris","Vincennes","Versailles","Boulogne-Billancourt","Montreuil","Saint-Denis","Créteil","Levallois-Perret","Issy-les-Moulineaux","Neuilly-sur-Seine","Pantin","Ivry-sur-Seine","Asnières-sur-Seine"];
 const LEVELS_LIST = ["Débutant","Intermédiaire","Avancé","Compétition"];
 const DAYS = ["Lun","Mar","Mer","Jeu","Ven","Sam","Dim"];
-const ONBOARDING_SPORTS = ["Tennis 🎾","Yoga 🧘","Natation 🏊","Padel 🏓","Boxe 🥊","CrossFit 💪","Pilates 🤸","Escalade 🧗","Judo 🥋","Athlétisme 🏃","Danse 💃","Gym 🏋️","Running 🚴","Autre 🏅"];
+const ONBOARDING_SPORTS = ["Tennis 🎾","Yoga 🧘","Natation 🏊","Padel 🏓","Boxe 🥊","CrossFit 💪","Pilates 🤸","Escalade 🧗","Judo 🥋","Athlétisme 🏃","Danse 💃","Gym 🏋️","Running 🏃","Karaté 🥋","Badminton 🏸","Squash 🎾","Taekwondo 🥋","Autre 🏅"];
 const OBJECTIVES = [{id:"remise",label:"Remise en forme",icon:"🔥"},{id:"performance",label:"Performance",icon:"🏆"},{id:"bienetre",label:"Bien-être",icon:"☮️"},{id:"sante",label:"Santé / Récupération",icon:"💊"},{id:"decouverte",label:"Découverte",icon:"✨"}];
 const FREQ_OPTIONS = ["1x / semaine","2x / semaine","3x / semaine","Tous les jours"];
 
@@ -668,13 +668,13 @@ const MOCK_HISTORY = [
 const MOCK_PLANNING = (() => {
   const today = new Date();
   const todayAbbr = ["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"][today.getDay()];
-  const soonHour = String(today.getHours()+1).padStart(2,"0")+":"+String(today.getMinutes()).padStart(2,"0");
-  // Pick two other days that are NOT today
+  const nextHour = (today.getHours() + 1) % 24;
+  const soonHour = String(nextHour).padStart(2,"0")+":"+String(today.getMinutes()).padStart(2,"0");
   const otherDays = ["Lun","Mar","Mer","Jeu","Ven","Sam","Dim"].filter(d=>d!==todayAbbr);
   return [
     {id:1,clubName:"Tennis Club de Paris",courseName:"Perfectionnement",day:todayAbbr,time:soonHour,emoji:"🎾",color:"#1AC7C1"},
-    {id:3,clubName:"Zen Yoga Studio",courseName:"Vinyasa Flow",day:otherDays[1],time:"12:00",emoji:"🧘",color:"#9B5DE5"},
-    {id:6,clubName:"Bloc Vertical Paris",courseName:"Progression technique",day:otherDays[3],time:"11:00",emoji:"🧗",color:"#22C55E"},
+    {id:3,clubName:"Zen Yoga Studio",courseName:"Vinyasa Flow",day:otherDays[1]||otherDays[0],time:"12:00",emoji:"🧘",color:"#9B5DE5"},
+    {id:6,clubName:"Bloc Vertical Paris",courseName:"Progression technique",day:otherDays[3]||otherDays[2]||otherDays[0],time:"11:00",emoji:"🧗",color:"#22C55E"},
   ];
 })();
 const MOCK_LEADS = [
@@ -725,7 +725,7 @@ function Onboarding({ onDone }) {
   const [phone, setPhone] = useState("");
   const [adresse, setAdresse] = useState("");
   const [genre, setGenre] = useState(null); // "M"|"F"|"NA"
-  const [medical, setMedical] = useState([]);
+  const [health, setHealth] = useState([]);
   const [password, setPassword] = useState("");
   const [showPw, setShowPw] = useState(false);
   const [avatar, setAvatar] = useState(null); // base64
@@ -738,24 +738,6 @@ function Onboarding({ onDone }) {
 
   const total = 5;
 
-  const MEDICAL_OPTIONS = [
-    {id:"cardiaque",icon:"❤️",label:"Problème cardiaque",sub:"Besoin d'autorisation médicale"},
-    {id:"grossesse",icon:"🤰",label:"Grossesse en cours",sub:"Cours adaptés & sécurisés"},
-    {id:"postPartum",icon:"🤱",label:"Post-partum",sub:"Reprise progressive après accouchement"},
-    {id:"handicap",icon:"♿",label:"Handicap / PMR",sub:"Accessibilité et cours adaptés"},
-    {id:"blessure",icon:"🦴",label:"Blessure / Rééducation",sub:"Programmes de récupération"},
-    {id:"aucun",icon:"✅",label:"Aucun antécédent",sub:"Je pratique sans contrainte"},
-  ];
-
-  const healthOptions = [
-    {id:"pmr",icon:"♿",label:"Accessibilité PMR",sub:"Handicap moteur ou fauteuil roulant"},
-    {id:"postPartum",icon:"🤱",label:"Post-partum",sub:"Reprise après accouchement"},
-    {id:"grossesse",icon:"🤰",label:"Grossesse",sub:"Activité pendant la grossesse"},
-    {id:"senior",icon:"👴",label:"Senior (65+)",sub:"Cours adaptés à mon âge"},
-    {id:"none",icon:"👍",label:"Aucune condition",sub:"Je pratique sans contrainte particulière"},
-  ];
-
-  const toggleMedical = (id) => setMedical(m => m.includes(id) ? m.filter(x=>x!==id) : [...m, id]);
   const toggleHealth = (id) => setHealth(h => h.includes(id) ? h.filter(x=>x!==id) : [...h, id]);
   const toggleSport = (s) => setSports(prev => prev.includes(s) ? prev.filter(x=>x!==s) : [...prev, s]);
 
@@ -771,7 +753,7 @@ function Onboarding({ onDone }) {
 
   const next = () => {
     if (step < total - 1) setStep(s => s + 1);
-    else onDone({ prenom, nom, dob, email, phone, adresse, genre, medical, avatar, sports, objective, freq, health, password });
+    else onDone({ prenom, nom, dob, email, phone, adresse, genre, medical: health, avatar, sports, objective, freq, health, password });
   };
 
   const avatarInitials = (prenom[0]||"?").toUpperCase() + (nom[0]||"").toUpperCase();
@@ -817,7 +799,7 @@ function Onboarding({ onDone }) {
 
             {/* Date de naissance */}
             <div className="ob-field">
-              <label className="ob-label">Date de naissance <span className="opt">optionnel</span></label>
+              <label className="ob-label">Date de naissance</label>
               <input className="ob-input" type="date" value={dob} onChange={e=>setDob(e.target.value)} max={new Date().toISOString().split("T")[0]}/>
             </div>
 
@@ -853,24 +835,6 @@ function Onboarding({ onDone }) {
                 ))}
               </div>
               <span style={{fontSize:10,color:"var(--text2)",marginTop:3}}>Permet de filtrer les cours réservés aux femmes</span>
-            </div>
-
-            {/* Antécédents médicaux */}
-            <div className="ob-field">
-              <label className="ob-label">Antécédents médicaux <span className="opt">optionnel</span></label>
-              <div className="ob-medical-list">
-                {MEDICAL_OPTIONS.map(m=>(
-                  <button key={m.id} className={`ob-medical-btn${medical.includes(m.id)?" on":""}`} onClick={()=>toggleMedical(m.id)}>
-                    <div className={`ob-medical-check`}>{medical.includes(m.id)?"✓":""}</div>
-                    <span style={{fontSize:17,flexShrink:0}}>{m.icon}</span>
-                    <div>
-                      <div style={{fontSize:13,fontWeight:600,color:"var(--text)"}}>{m.label}</div>
-                      <div style={{fontSize:10,color:"var(--text2)",marginTop:1}}>{m.sub}</div>
-                    </div>
-                  </button>
-                ))}
-              </div>
-              <span style={{fontSize:10,color:"var(--text2)",marginTop:4}}>🔒 Ces infos restent privées et servent uniquement à adapter tes résultats</span>
             </div>
 
             {/* Mot de passe */}
@@ -939,13 +903,22 @@ function Onboarding({ onDone }) {
           <h2 className="ob-title">Profil <em>spécifique</em> ?</h2>
           <p className="ob-sub">On activera automatiquement les filtres adaptés. Optionnel, tu peux passer.</p>
           <div className="ob-health-list">
-            {healthOptions.map(h => (
+            {[
+              {id:"cardiaque",  icon:"❤️", label:"Problème cardiaque",        sub:"Besoin d'autorisation médicale"},
+              {id:"grossesse",  icon:"🤰", label:"Grossesse en cours",          sub:"Cours adaptés & sécurisés"},
+              {id:"postPartum", icon:"🤱", label:"Post-partum",                 sub:"Reprise progressive après accouchement"},
+              {id:"pmr",        icon:"♿", label:"Handicap / PMR",              sub:"Accessibilité et cours adaptés"},
+              {id:"blessure",   icon:"🦴", label:"Blessure / Rééducation",      sub:"Programmes de récupération"},
+              {id:"senior",     icon:"👴", label:"Senior (65+)",                sub:"Cours adaptés à mon âge"},
+              {id:"none",       icon:"👍", label:"Aucun antécédent",            sub:"Je pratique sans contrainte particulière"},
+            ].map(h => (
               <button key={h.id} className={`ob-health-btn${health.includes(h.id)?" on":""}`} onClick={()=>toggleHealth(h.id)}>
                 <span className="ob-health-ico">{h.icon}</span>
                 <div><div className="ob-health-label">{h.label}</div><div className="ob-health-sub">{h.sub}</div></div>
               </button>
             ))}
           </div>
+          <div style={{fontSize:10,color:"var(--text2)",marginTop:12}}>🔒 Ces infos restent privées et servent uniquement à adapter tes résultats</div>
         </>}
 
       </div>
@@ -1061,10 +1034,12 @@ function ClubDetail({ club, isFav, onToggleFav, onClose, onAddToPlanning, showTo
               </div>
             </div>
           </div>
+          {club.type !== "Association" && (
           <div className="sh-section">
             <div className="sh-stitle">Politique d'annulation</div>
             <div className="cancel-box">{club.cancelPolicy}</div>
           </div>
+          )}
           {club.type !== "Association" && (
           <div className="sh-section">
             <div className="sh-stitle">Cours proposés</div>
@@ -1197,13 +1172,12 @@ function ClubDetail({ club, isFav, onToggleFav, onClose, onAddToPlanning, showTo
             <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:1,color:"var(--text2)",marginBottom:8}}>Jour</div>
             <div style={{display:"flex",gap:6,flexWrap:"wrap",marginBottom:18}}>
               {DAYS.filter(d=>(club.schedule[d]||[]).length>0).map(d=>{
-                // Compute the date of this day in the current week (Mon=0)
                 const todayJs = new Date();
-                const todayMon = (todayJs.getDay()+6)%7; // Mon=0
+                const todayMon = (todayJs.getDay()+6)%7;
                 const dayIdx = DAYS.indexOf(d);
-                const diff = dayIdx - todayMon;
+                const diff = ((dayIdx - todayMon) + 7) % 7 || 7; // always future, min today+0 but if same day stays 0
                 const date = new Date(todayJs);
-                date.setDate(todayJs.getDate() + diff);
+                date.setDate(todayJs.getDate() + (dayIdx===todayMon?0:diff));
                 const dayNum = date.getDate();
                 return (
                   <button key={d} onClick={()=>{setPickedDay(d);setPickedTime((club.schedule[d]||[])[0]||null)}}
@@ -1276,8 +1250,9 @@ function ClubDetail({ club, isFav, onToggleFav, onClose, onAddToPlanning, showTo
                 <div style={{display:"flex",gap:6,flexWrap:"wrap",marginBottom:18}}>
                   {DAYS.filter(d=>(club.schedule[d]||[]).length>0).map(d=>{
                     const todayJs=new Date();const todayMon=(todayJs.getDay()+6)%7;
-                    const diff=DAYS.indexOf(d)-todayMon;
-                    const dt=new Date(todayJs);dt.setDate(todayJs.getDate()+diff);
+                    const dayIdx2=DAYS.indexOf(d);
+                    const diff2=((dayIdx2-todayMon)+7)%7||7;
+                    const dt=new Date(todayJs);dt.setDate(todayJs.getDate()+(dayIdx2===todayMon?0:diff2));
                     return (
                       <button key={d} onClick={()=>{setEssaiDay(d);setEssaiTime((club.schedule[d]||[])[0]||null);}}
                         style={{padding:"7px 14px",borderRadius:100,border:`1.5px solid ${essaiDay===d?"var(--co)":"var(--border)"}`,background:essaiDay===d?"rgba(255,154,90,0.1)":"transparent",color:essaiDay===d?"var(--co)":"var(--text2)",fontSize:12,fontWeight:700,cursor:"pointer",fontFamily:"var(--font)",display:"flex",gap:5,alignItems:"center"}}>
@@ -1344,7 +1319,7 @@ function FilterDrawer({ filters, onChange, onClose, resultCount }) {
     local.budget<500, local.levels.length>0, local.ambiance!==null,
     local.essaiGratuit, local.pmr, local.postPartum, local.womenOnly,
     local.parentEnfant, local.tarifEtudiant, local.tarifSenior, local.tarifFamille,
-    local.coachPerso
+    local.coachPerso, local.abonnementMensuel, local.abonnementAnnuel
   ].filter(Boolean).length;
 
   return (
@@ -1353,7 +1328,7 @@ function FilterDrawer({ filters, onChange, onClose, resultCount }) {
         <div className="dr-handle"/>
         <div className="dr-head">
           <div className="dr-title">Filtres {activeCount>0 && <span style={{color:"var(--co)",marginLeft:4}}>{activeCount}</span>}</div>
-          <button className="dr-reset" onClick={()=>setLocal({sport:"Tous",city:"Toutes",budget:500,levels:[],ambiance:null,indoor:null,essaiGratuit:false,pmr:false,postPartum:false,womenOnly:false,parentEnfant:false,tarifEtudiant:false,tarifSenior:false,tarifFamille:false,coachPerso:false})}>Réinitialiser</button>
+          <button className="dr-reset" onClick={()=>setLocal({sport:"Tous",city:"Toutes",budget:500,levels:[],ambiance:null,indoor:null,essaiGratuit:false,pmr:false,postPartum:false,womenOnly:false,parentEnfant:false,tarifEtudiant:false,tarifSenior:false,tarifFamille:false,coachPerso:false,abonnementMensuel:false,abonnementAnnuel:false})}>Réinitialiser</button>
         </div>
         <div className="fg">
           <div className="fgt">Sport</div>
@@ -1516,7 +1491,7 @@ function ClubCard({ club, isFav, onFav, onClick, index=0 }) {
       <div className="card-img">
         {imgOk
           ? <img src={club.image} alt={club.name} loading="lazy" onError={()=>setImgOk(false)}/>
-          : <div style={{width:"100%",height:"100%",background:`linear-gradient(135deg,${club.accentColor}dd,${club.accentColor}88)`,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:6}}><span style={{fontSize:56,filter:"drop-shadow(0 2px 8px rgba(0,0,0,0.2))"}}>{club.emoji}</span><span style={{color:"rgba(255,255,255,0.9)",fontSize:13,fontWeight:700,letterSpacing:1}}>{club.sport.toUpperCase()}</span></div>
+          : <div style={{width:"100%",height:"100%",background:`linear-gradient(135deg,${club.accentColor}dd,${club.accentColor}88)`,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:6}}><span style={{fontSize:56,filter:"drop-shadow(0 2px 8px rgba(0,0,0,0.2))"}}>{club.emoji}</span><span style={{color:"rgba(255,255,255,0.9)",fontSize:13,fontWeight:700,letterSpacing:1}}>{(club.sport||"").toUpperCase()}</span></div>
         }
         <div className="card-img-ov"/>
         <div className="card-badges">
@@ -1546,7 +1521,14 @@ function ClubCard({ club, isFav, onFav, onClick, index=0 }) {
           {club.features.slice(0,2).map(f=><span key={f} className="feat-tag">{f}</span>)}
         </div>
         <div className="card-footer">
-          <div className="card-price">{priceLabel(club)}</div>
+          <div>
+            <div className="card-price">{priceLabel(club)}</div>
+            {club.priceCourse && club.type !== "Association" && (
+              <div style={{fontSize:10,fontWeight:600,color:"var(--text2)",marginTop:1}}>
+                à partir de {club.priceCourse}€/séance
+              </div>
+            )}
+          </div>
           <div style={{display:"flex",gap:4}}>
             {club.levels.map(l=>(
               <div key={l} title={l} className="level-dot" style={{width:8,height:8,borderRadius:"50%",background:l==="Débutant"?"#1AC7C1":l==="Intermédiaire"?"#FF9A5A":l==="Avancé"?"#EF4444":"#9B5DE5"}}/>
@@ -2450,20 +2432,139 @@ function FilterBar({ filters, setFilters, activeFiltersCount, onOpenDrawer, onRe
   const catActive = {
     sport: filters.sport !== "Tous",
     ville: filters.city !== "Toutes",
-    abonnement: filters.essaiGratuit || filters.tarifEtudiant || filters.tarifSenior || filters.tarifFamille || filters.budget < 500,
-    enseignement: filters.coachPerso || filters.levels.length > 0,
-    lieu: filters.indoor !== null || filters.pmr || filters.postPartum || filters.womenOnly || filters.parentEnfant,
+    abonnement: filters.essaiGratuit || filters.tarifEtudiant || filters.tarifSenior || filters.tarifFamille || filters.abonnementMensuel || filters.abonnementAnnuel || filters.budget < 500,
+    niveau: filters.coachPerso || filters.levels.length > 0,
+    lieu: filters.indoor !== null,
+    profil: filters.pmr || filters.postPartum || filters.womenOnly || filters.parentEnfant,
     ambiance: filters.ambiance !== null,
   };
 
   const CATS = [
-    { id:"sport",    label:"🏅 Sport",       active: catActive.sport },
-    { id:"ville",    label:"📍 Ville",        active: catActive.ville },
-    { id:"abonnement",label:"💳 Abonnement",  active: catActive.abonnement },
-    { id:"enseignement",label:"🎓 Enseignement", active: catActive.enseignement },
-    { id:"lieu",     label:"🏠 Lieu & profil",active: catActive.lieu },
-    { id:"ambiance", label:"✨ Ambiance",     active: catActive.ambiance },
+    { id:"sport",      label:"🏅 Sport",           active: catActive.sport },
+    { id:"ville",      label:"📍 Ville",            active: catActive.ville },
+    { id:"abonnement", label:"💶 Tarifs",           active: catActive.abonnement },
+    { id:"niveau",     label:"🎯 Niveau",           active: catActive.niveau },
+    { id:"lieu",       label:"🏠 Lieu",             active: catActive.lieu },
+    { id:"profil",     label:"👤 Profil spécifique",active: catActive.profil },
+    { id:"ambiance",   label:"✨ Ambiance",         active: catActive.ambiance },
   ];
+
+  return (
+    <div style={{background:"#fff",borderBottom:"1px solid var(--border)",position:"relative"}}>
+      {/* Pill bar */}
+      <div style={{display:"flex",gap:6,padding:"10px 16px",overflowX:"auto",scrollbarWidth:"none",alignItems:"center"}}>
+        <button className="filter-btn-sm" onClick={onOpenDrawer} style={{flexShrink:0,display:"flex",alignItems:"center",gap:5}}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="3" width="14" height="1.5" rx=".75"/><rect x="1" y="7.25" width="14" height="1.5" rx=".75"/><rect x="1" y="11.5" width="14" height="1.5" rx=".75"/><circle cx="5" cy="3.75" r="2" fill="currentColor"/><circle cx="11" cy="8" r="2" fill="currentColor"/><circle cx="6" cy="12.25" r="2" fill="currentColor"/></svg>
+          {activeFiltersCount>0&&<span className="fcnt">{activeFiltersCount}</span>}
+        </button>
+        {activeFiltersCount>0 && (
+          <button onClick={onResetFilters} style={{flexShrink:0,padding:"6px 12px",borderRadius:100,fontSize:11,fontWeight:700,background:"rgba(239,68,68,0.08)",border:"1.5px solid rgba(239,68,68,0.25)",color:"#EF4444",cursor:"pointer",whiteSpace:"nowrap",fontFamily:"var(--font)"}}>
+            ✕ Tout effacer
+          </button>
+        )}
+        <div style={{width:"1px",height:24,background:"var(--border)",flexShrink:0,margin:"0 2px"}}/>
+        {CATS.map(cat=>(
+          <button key={cat.id}
+            onClick={()=>toggle(cat.id)}
+            style={{flexShrink:0,padding:"6px 14px",borderRadius:"100px",fontSize:12,fontWeight:700,
+              background: cat.active ? "var(--tq)" : openCat===cat.id ? "var(--bg)" : "#fff",
+              border: `1.5px solid ${cat.active ? "var(--tq)" : openCat===cat.id ? "var(--tq)" : "var(--border)"}`,
+              color: cat.active ? "#fff" : openCat===cat.id ? "var(--tq)" : "var(--text2)",
+              cursor:"pointer",transition:"all .18s",display:"flex",alignItems:"center",gap:5,whiteSpace:"nowrap"
+            }}>
+            {cat.label}
+            <span style={{fontSize:10,opacity:.7,marginLeft:1}}>{openCat===cat.id?"▲":"▼"}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Dropdown panel */}
+      {openCat && (
+        <div style={{position:"absolute",top:"100%",left:0,right:0,background:"#fff",borderBottom:"2px solid var(--tq)",zIndex:150,padding:"12px 16px 16px",boxShadow:"0 8px 24px rgba(0,0,0,0.1)",animation:"fadeIn .15s ease"}}>
+
+          {openCat==="sport" && <div>
+            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Sport pratiqué</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+              {SPORTS.slice(1).map(s=>(
+                <button key={s} className={`fchip${filters.sport===s?" active":""}`} onClick={()=>{setFilters(f=>({...f,sport:f.sport===s?"Tous":s}));setOpenCat(null);}}>{s}</button>
+              ))}
+            </div>
+          </div>}
+
+          {openCat==="ville" && <div>
+            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Localisation</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+              {CITIES.slice(1).map(c=>(
+                <button key={c} className={`fchip${filters.city===c?" active":""}`} onClick={()=>{setFilters(f=>({...f,city:f.city===c?"Toutes":c}));setOpenCat(null);}}>{c}</button>
+              ))}
+            </div>
+          </div>}
+
+          {openCat==="abonnement" && <div style={{display:"flex",flexDirection:"column",gap:12}}>
+            <div>
+              <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Tarifs & abonnements</div>
+              <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+                {[
+                  ["essaiGratuit","✓ Essai gratuit"],
+                  ["tarifEtudiant","🎓 Tarif étudiant"],
+                  ["tarifSenior","👴 Tarif sénior"],
+                  ["tarifFamille","👨‍👩‍👧 Tarif famille"],
+                  ["abonnementMensuel","📅 Abonnement mensuel"],
+                  ["abonnementAnnuel","📆 Abonnement annuel"],
+                ].map(([k,l])=>(
+                  <button key={k} className={`fchip${filters[k]?" active":""}`} onClick={()=>setFilters(f=>({...f,[k]:!f[k]}))}>{l}</button>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:6}}>Budget max · {filters.budget===500?"Illimité":`${filters.budget}€/mois`}</div>
+              <input type="range" min={0} max={500} step={10} value={filters.budget} onChange={e=>setFilters(f=>({...f,budget:Number(e.target.value)}))} style={{width:"100%"}}/>
+            </div>
+          </div>}
+
+          {openCat==="niveau" && <div>
+            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Niveau & encadrement</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+              <button className={`fchip${filters.coachPerso?" active":""}`} onClick={()=>setFilters(f=>({...f,coachPerso:!f.coachPerso}))}>💪 Coach perso</button>
+              {LEVELS_LIST.map(l=>(
+                <button key={l} className={`fchip${filters.levels.includes(l)?" active":""}`} onClick={()=>setFilters(f=>({...f,levels:f.levels.includes(l)?f.levels.filter(x=>x!==l):[...f.levels,l]}))}>{l}</button>
+              ))}
+            </div>
+          </div>}
+
+          {openCat==="lieu" && <div>
+            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Type de lieu</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+              <button className={`fchip${filters.indoor===true?" active":""}`} onClick={()=>setFilters(f=>({...f,indoor:f.indoor===true?null:true}))}>🏠 Indoor</button>
+              <button className={`fchip${filters.indoor===false?" active":""}`} onClick={()=>setFilters(f=>({...f,indoor:f.indoor===false?null:false}))}>🌳 Outdoor</button>
+            </div>
+          </div>}
+
+          {openCat==="profil" && <div>
+            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Profil spécifique</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+              <button className={`fchip${filters.pmr?" active":""}`} onClick={()=>setFilters(f=>({...f,pmr:!f.pmr}))}>♿ PMR</button>
+              <button className={`fchip${filters.postPartum?" active":""}`} onClick={()=>setFilters(f=>({...f,postPartum:!f.postPartum}))}>🤱 Post-partum</button>
+              <button className={`fchip${filters.womenOnly?" active":""}`} onClick={()=>setFilters(f=>({...f,womenOnly:!f.womenOnly}))}>💜 Women Only</button>
+              <button className={`fchip${filters.parentEnfant?" active":""}`} onClick={()=>setFilters(f=>({...f,parentEnfant:!f.parentEnfant}))}>👧 Parent/enfant</button>
+            </div>
+          </div>}
+
+          {openCat==="ambiance" && <div>
+            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Ambiance du club</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+              {[["loisirs","🎉 Loisirs"],["performance","🏆 Performance"],["bien-être","☮️ Bien-être"]].map(([val,lbl])=>(
+                <button key={val} className={`fchip${filters.ambiance===val?" active":""}`} onClick={()=>{setFilters(f=>({...f,ambiance:f.ambiance===val?null:val}));setOpenCat(null);}}>{lbl}</button>
+              ))}
+            </div>
+          </div>}
+
+          <button onClick={()=>setOpenCat(null)} style={{position:"absolute",top:10,right:12,background:"none",border:"none",fontSize:16,cursor:"pointer",color:"var(--text2)"}}>✕</button>
+        </div>
+      )}
+    </div>
+  );
+}
 
   return (
     <div style={{background:"#fff",borderBottom:"1px solid var(--border)",position:"relative"}}>
@@ -2517,9 +2618,16 @@ function FilterBar({ filters, setFilters, activeFiltersCount, onOpenDrawer, onRe
 
           {openCat==="abonnement" && <div style={{display:"flex",flexDirection:"column",gap:12}}>
             <div>
-              <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Tarifs spéciaux</div>
+              <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Tarifs & abonnements</div>
               <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-                {[["essaiGratuit","✓ Essai gratuit"],["tarifEtudiant","🎓 Étudiant"],["tarifSenior","👴 Senior"],["tarifFamille","👨‍👩‍👧 Famille"]].map(([k,l])=>(
+                {[
+                  ["essaiGratuit","✓ Essai gratuit"],
+                  ["tarifEtudiant","🎓 Tarif étudiant"],
+                  ["tarifSenior","👴 Tarif sénior"],
+                  ["tarifFamille","👨‍👩‍👧 Tarif famille"],
+                  ["abonnementMensuel","📅 Abonnement mensuel"],
+                  ["abonnementAnnuel","📆 Abonnement annuel"],
+                ].map(([k,l])=>(
                   <button key={k} className={`fchip${filters[k]?" active":""}`} onClick={()=>setFilters(f=>({...f,[k]:!f[k]}))}>{l}</button>
                 ))}
               </div>
@@ -2568,7 +2676,7 @@ function FilterBar({ filters, setFilters, activeFiltersCount, onOpenDrawer, onRe
   );
 }
 
-const DEFAULT_FILTERS = { sport:"Tous", city:"Toutes", budget:500, levels:[], ambiance:null, indoor:null, essaiGratuit:false, pmr:false, postPartum:false, womenOnly:false, parentEnfant:false, tarifEtudiant:false, tarifSenior:false, tarifFamille:false, coachPerso:false };
+const DEFAULT_FILTERS = { sport:"Tous", city:"Toutes", budget:500, levels:[], ambiance:null, indoor:null, essaiGratuit:false, pmr:false, postPartum:false, womenOnly:false, parentEnfant:false, tarifEtudiant:false, tarifSenior:false, tarifFamille:false, coachPerso:false, abonnementMensuel:false, abonnementAnnuel:false };
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━ PRO LANDING ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function ProLanding({ onClose }) {
@@ -2710,6 +2818,29 @@ function ProLanding({ onClose }) {
         </div>
       </div>
 
+      {/* CALENDAR SYNC */}
+      <div style={{...pl.section,borderTop:"1px solid rgba(255,255,255,0.06)"}}>
+        <div style={pl.sectionLabel}>Intégration</div>
+        <h2 style={{...pl.h2,marginBottom:8}}>Synchronisez votre calendrier <em style={pl.tqText}>avec le nôtre.</em></h2>
+        <p style={{color:"#94A3B8",fontSize:14,marginBottom:32,lineHeight:1.7}}>Connectez votre planning existant à Clubby Pro en un clic. Vos créneaux se mettent à jour automatiquement — plus de double saisie, plus d'erreurs.</p>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(220px,1fr))",gap:14}}>
+          {[
+            {ico:"📅",label:"Google Calendar",sub:"Synchronisation en temps réel"},
+            {ico:"🍎",label:"Apple Calendar",sub:"Compatible iPhone & Mac"},
+            {ico:"🔵",label:"Outlook / Teams",sub:"Pour les structures en entreprise"},
+            {ico:"🔗",label:"Lien iCal universel",sub:"Compatible avec tous les outils"},
+          ].map(c=>(
+            <div key={c.label} style={{...pl.card,display:"flex",gap:14,alignItems:"center"}}>
+              <span style={{fontSize:28,flexShrink:0}}>{c.ico}</span>
+              <div>
+                <div style={{fontSize:13,fontWeight:700,marginBottom:2}}>{c.label}</div>
+                <div style={{fontSize:11,color:"#64748B"}}>{c.sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* PRICING */}
       <div style={{...pl.section,borderTop:"1px solid rgba(255,255,255,0.06)"}}>
         <div style={{...pl.sectionLabel,textAlign:"center"}}>Tarifs</div>
@@ -2731,7 +2862,7 @@ function ProLanding({ onClose }) {
             <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:1.5,color:"#64748B",marginBottom:8}}>Pro</div>
             <div style={{fontSize:44,fontWeight:900,lineHeight:1,marginBottom:6,color:"#1AC7C1"}}><sup style={{fontSize:20,color:"#64748B"}}>€</sup>49<sub style={{fontSize:13,fontWeight:500,color:"#64748B"}}>/mois</sub></div>
             <div style={{fontSize:12,color:"#94A3B8",marginBottom:20,paddingBottom:20,borderBottom:"1px solid rgba(255,255,255,0.07)"}}>Tout pour remplir vos cours.</div>
-            {["Tout du plan Gratuit","Fiche enrichie (photos, cours, coachs)","Demandes d'essais en temps réel","Tableau de bord & statistiques","Mise en avant dans les résultats","Gestion des avis vérifiés","Alertes places libérées","Support dédié inclus"].map(f=><div key={f} style={{display:"flex",gap:8,alignItems:"center",marginBottom:10,fontSize:12}}><span style={{width:16,height:16,borderRadius:"50%",background:"rgba(26,199,193,0.15)",color:"#1AC7C1",display:"flex",alignItems:"center",justifyContent:"center",fontSize:9,fontWeight:800,flexShrink:0}}>✓</span>{f}</div>)}
+            {["Tout du plan Gratuit","Fiche enrichie (photos, cours, coachs)","Demandes d'essais en temps réel","Tableau de bord & statistiques","Mise en avant dans les résultats","Gestion des avis vérifiés","Alertes places libérées","Synchronisation de votre calendrier","Support dédié inclus"].map(f=><div key={f} style={{display:"flex",gap:8,alignItems:"center",marginBottom:10,fontSize:12}}><span style={{width:16,height:16,borderRadius:"50%",background:"rgba(26,199,193,0.15)",color:"#1AC7C1",display:"flex",alignItems:"center",justifyContent:"center",fontSize:9,fontWeight:800,flexShrink:0}}>✓</span>{f}</div>)}
             <button style={{width:"100%",padding:13,borderRadius:10,fontSize:13,fontWeight:800,border:"none",background:"linear-gradient(135deg,#1AC7C1,#14a09b)",color:"#fff",cursor:"pointer",marginTop:10}} onClick={scrollToForm}>Contacter l'équipe →</button>
           </div>
         </div>
@@ -2931,7 +3062,8 @@ function ClubOnboarding({ onDone }) {
 
   // Step 0 — Infos générales
   const [clubName, setClubName] = useState("");
-  const [sport, setSport] = useState("");
+  const [sports, setSports] = useState([]);
+  const toggleSport = s => setSports(p => p.includes(s) ? p.filter(x=>x!==s) : [...p, s]);
   const [type, setType] = useState(""); // Privé / Association / Franchise
   const [description, setDescription] = useState("");
 
@@ -3011,7 +3143,7 @@ function ClubOnboarding({ onDone }) {
             ))}
           </div>
           <button
-            onClick={()=>onDone({clubName,sport,type,address,city,email,phone,contactPrenom,contactNom})}
+            onClick={()=>onDone({clubName,sport:sports.join(", "),sports,type,address,city,email,phone,contactPrenom,contactNom})}
             style={{width:"100%",padding:16,background:"linear-gradient(135deg,#1AC7C1,#14a09b)",color:"#fff",border:"none",borderRadius:12,fontSize:15,fontWeight:800,cursor:"pointer",fontFamily:"inherit"}}
           >
             Accéder à mon Espace Club →
@@ -3051,10 +3183,10 @@ function ClubOnboarding({ onDone }) {
           </div>
 
           <div style={fieldWrap}>
-            <label style={lbl}>Sport pratiqué *</label>
+            <label style={lbl}>Sports pratiqués *</label>
             <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
               {SPORTS_LIST.map(s=>(
-                <button key={s} onClick={()=>setSport(s)} style={{padding:"8px 14px",borderRadius:100,border:`1.5px solid ${sport===s?"#1AC7C1":"rgba(255,255,255,0.1)"}`,background:sport===s?"rgba(26,199,193,0.12)":"transparent",color:sport===s?"#1AC7C1":"#94A3B8",fontSize:12,fontWeight:600,cursor:"pointer",fontFamily:"inherit",transition:"all .15s"}}>
+                <button key={s} onClick={()=>toggleSport(s)} style={{padding:"8px 14px",borderRadius:100,border:`1.5px solid ${sports.includes(s)?"#1AC7C1":"rgba(255,255,255,0.1)"}`,background:sports.includes(s)?"rgba(26,199,193,0.12)":"transparent",color:sports.includes(s)?"#1AC7C1":"#94A3B8",fontSize:12,fontWeight:600,cursor:"pointer",fontFamily:"inherit",transition:"all .15s"}}>
                   {s}
                 </button>
               ))}
@@ -3227,15 +3359,40 @@ function ClubOnboarding({ onDone }) {
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━ MODE SELECTION ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-function ModeSelection({ onSelect }) {
+function ModeSelection({ onSelect, onLogin }) {
   const [hovered, setHovered] = useState(null);
+  const [showLogin, setShowLogin] = useState(false);
+  const [loginMode, setLoginMode] = useState("sportif"); // "sportif" | "pro"
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPw, setLoginPw] = useState("");
+  const [showPw, setShowPw] = useState(false);
+  const [loginError, setLoginError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async () => {
+    if (!loginEmail.trim() || !loginPw.trim()) { setLoginError("Remplis tous les champs."); return; }
+    setLoading(true); setLoginError("");
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({ email: loginEmail, password: loginPw });
+      if (error) { setLoginError("Email ou mot de passe incorrect."); setLoading(false); return; }
+      onLogin(loginMode, data.user);
+    } catch(e) { setLoginError("Erreur de connexion."); }
+    setLoading(false);
+  };
+
+  const inp = {width:"100%",background:"rgba(255,255,255,0.06)",border:"1.5px solid rgba(255,255,255,0.1)",borderRadius:10,padding:"11px 14px",fontSize:14,color:"#F8FAFC",fontFamily:"'Montserrat',sans-serif",outline:"none",boxSizing:"border-box"};
+
   return (
     <div style={{minHeight:"100vh",background:"#0B0F1A",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Montserrat',sans-serif",padding:"32px 20px",position:"relative",overflow:"hidden"}}>
       {/* Background glows */}
       <div style={{position:"absolute",top:"-10%",left:"-10%",width:"50vw",height:"50vw",background:"radial-gradient(circle,rgba(26,199,193,0.12),transparent 65%)",pointerEvents:"none"}}/>
       <div style={{position:"absolute",bottom:"-10%",right:"-10%",width:"50vw",height:"50vw",background:"radial-gradient(circle,rgba(255,154,90,0.09),transparent 65%)",pointerEvents:"none"}}/>
-      {/* Grid pattern */}
       <div style={{position:"absolute",inset:0,backgroundImage:"linear-gradient(rgba(26,199,193,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(26,199,193,0.03) 1px,transparent 1px)",backgroundSize:"50px 50px",pointerEvents:"none"}}/>
+
+      {/* Se connecter button top right */}
+      <button onClick={()=>setShowLogin(true)} style={{position:"absolute",top:20,right:20,padding:"8px 18px",borderRadius:100,border:"1.5px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#94A3B8",fontSize:12,fontWeight:700,cursor:"pointer",fontFamily:"'Montserrat',sans-serif",transition:"all .2s",zIndex:10}}>
+        Se connecter
+      </button>
 
       <div style={{position:"relative",zIndex:1,textAlign:"center",maxWidth:600,width:"100%"}}>
         {/* Logo */}
@@ -3314,8 +3471,57 @@ function ModeSelection({ onSelect }) {
             </div>
           </div>
         </div>
-
       </div>
+
+      {/* LOGIN MODAL */}
+      {showLogin && (
+        <div style={{position:"fixed",top:0,left:0,right:0,bottom:0,background:"rgba(0,0,0,0.6)",zIndex:200,display:"flex",alignItems:"center",justifyContent:"center",padding:20}} onClick={e=>{if(e.target===e.currentTarget)setShowLogin(false)}}>
+          <div style={{background:"#141927",border:"1px solid rgba(255,255,255,0.08)",borderRadius:20,padding:"32px 28px",width:"100%",maxWidth:400,position:"relative"}}>
+            <button onClick={()=>setShowLogin(false)} style={{position:"absolute",top:16,right:16,background:"none",border:"none",color:"#64748B",fontSize:18,cursor:"pointer"}}>✕</button>
+
+            <div style={{textAlign:"center",marginBottom:24}}>
+              <div style={{fontSize:22,fontWeight:900,color:"#1AC7C1",marginBottom:4}}>Clubby</div>
+              <div style={{fontSize:16,fontWeight:800,color:"#F8FAFC",marginBottom:4}}>Bon retour 👋</div>
+              <div style={{fontSize:12,color:"#64748B"}}>Connecte-toi à ton compte</div>
+            </div>
+
+            {/* Type toggle */}
+            <div style={{display:"flex",background:"rgba(255,255,255,0.05)",borderRadius:10,padding:3,gap:3,marginBottom:20}}>
+              {[["sportif","🏃 Sportif"],["pro","🏢 Club"]].map(([mode,lbl])=>(
+                <button key={mode} onClick={()=>setLoginMode(mode)} style={{flex:1,padding:"8px",border:"none",borderRadius:7,fontSize:12,fontWeight:700,cursor:"pointer",fontFamily:"'Montserrat',sans-serif",background:loginMode===mode?"rgba(26,199,193,0.15)":"transparent",color:loginMode===mode?"#1AC7C1":"#64748B",transition:"all .2s"}}>
+                  {lbl}
+                </button>
+              ))}
+            </div>
+
+            <div style={{marginBottom:12}}>
+              <label style={{fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:1,color:"#64748B",marginBottom:5,display:"block"}}>Email</label>
+              <input value={loginEmail} onChange={e=>setLoginEmail(e.target.value)} placeholder="ton@email.fr" type="email" style={inp}/>
+            </div>
+            <div style={{marginBottom:6}}>
+              <label style={{fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:1,color:"#64748B",marginBottom:5,display:"block"}}>Mot de passe</label>
+              <div style={{position:"relative"}}>
+                <input value={loginPw} onChange={e=>setLoginPw(e.target.value)} placeholder="••••••••" type={showPw?"text":"password"} style={{...inp,paddingRight:40}} onKeyDown={e=>e.key==="Enter"&&handleLogin()}/>
+                <button onClick={()=>setShowPw(v=>!v)} style={{position:"absolute",right:12,top:"50%",transform:"translateY(-50%)",background:"none",border:"none",cursor:"pointer",fontSize:14}}>{showPw?"🙈":"👁️"}</button>
+              </div>
+            </div>
+            <div style={{textAlign:"right",marginBottom:20}}>
+              <span style={{fontSize:11,color:"#1AC7C1",cursor:"pointer",fontWeight:600}}>Mot de passe oublié ?</span>
+            </div>
+
+            {loginError && <div style={{fontSize:12,color:"#EF4444",background:"rgba(239,68,68,0.08)",border:"1px solid rgba(239,68,68,0.2)",borderRadius:8,padding:"8px 12px",marginBottom:14,textAlign:"center"}}>{loginError}</div>}
+
+            <button onClick={handleLogin} style={{width:"100%",padding:14,background:loading?"rgba(26,199,193,0.4)":"linear-gradient(135deg,#1AC7C1,#14a09b)",color:"#fff",border:"none",borderRadius:10,fontSize:14,fontWeight:800,cursor:loading?"not-allowed":"pointer",fontFamily:"'Montserrat',sans-serif"}}>
+              {loading?"Connexion...":"Se connecter →"}
+            </button>
+
+            <div style={{textAlign:"center",marginTop:16,fontSize:12,color:"#475569"}}>
+              Pas encore de compte ?{" "}
+              <span onClick={()=>{setShowLogin(false);onSelect(loginMode)}} style={{color:"#1AC7C1",fontWeight:700,cursor:"pointer"}}>Créer un compte</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -3423,7 +3629,7 @@ export default function App() {
     }
     if (filters.sport !== "Tous" && c.sport !== filters.sport) return false;
     if (filters.city !== "Toutes" && c.city !== filters.city) return false;
-    const monthlyPrice = c.priceUnit === "an" ? c.priceMin / 12 : c.priceMin;
+    const monthlyPrice = c.priceUnit === "an" ? c.priceMin / 12 : c.priceUnit === "séance" ? c.priceMin * 4 : c.priceMin;
     if (filters.budget < 500 && monthlyPrice > filters.budget) return false;
     if (filters.levels.length > 0 && !filters.levels.some(l=>c.levels.includes(l))) return false;
     if (filters.ambiance && c.ambiance !== filters.ambiance) return false;
@@ -3437,8 +3643,16 @@ export default function App() {
     if (filters.tarifSenior && !c.tarifSenior) return false;
     if (filters.tarifFamille && !c.tarifFamille) return false;
     if (filters.coachPerso && !c.labels.includes("Coach perso")) return false;
+    if (filters.abonnementMensuel && c.priceUnit !== "mois") return false;
+    if (filters.abonnementAnnuel && c.priceUnit !== "an") return false;
     return true;
-  }).sort((a,b) => sort==="prix"?a.priceMin-b.priceMin:sort==="avis"?b.rating-a.rating:b.rating-a.rating);
+  const toMonthly = c => c.priceUnit === "an" ? c.priceMin/12 : c.priceUnit === "séance" ? c.priceMin*4 : c.priceMin;
+  const sorted = [...filtered].sort((a,b) => {
+    if (sort === "prix") return toMonthly(a) - toMonthly(b);
+    if (sort === "avis") return b.rating - a.rating;
+    // pertinence: rating * log(reviews) — clubs populaires ET bien notés remontent
+    return (b.rating * Math.log(b.reviews+1)) - (a.rating * Math.log(a.reviews+1));
+  });
 
   const activeFiltersCount = Object.entries(filters).filter(([k,v]) => {
     if (k==="sport") return v!=="Tous";
@@ -3473,6 +3687,10 @@ export default function App() {
           if (mode === "pro") {
             setShowOnboarding(false);
           }
+        }} onLogin={(mode, user) => {
+          setAppMode(mode);
+          setShowOnboarding(false);
+          setShowClubOnboarding(false);
         }}/>
       </>
     );
@@ -3595,10 +3813,11 @@ export default function App() {
           setShowOnboarding(false);
           if (profile) {
             setUserProfile(profile);
-            const sportName = profile.sports?.[0]?.split(" ").slice(0,-1).join(" ");
-            if (sportName && SPORTS.includes(sportName)) setFilters(f=>({...f,sport:sportName}));
-            if (profile.medical?.includes("handicap")) setFilters(f=>({...f,pmr:true}));
-            if (profile.medical?.includes("postPartum")) setFilters(f=>({...f,postPartum:true}));
+            const sportName = profile.sports?.[0]?.split(" ").slice(0,-1).join(" ") || profile.sports?.[0]?.replace(/\s*\S+$/, "").trim();
+            const cleanSport = sportName || profile.sports?.[0];
+            if (cleanSport && SPORTS.includes(cleanSport)) setFilters(f=>({...f,sport:cleanSport}));
+            if (profile.health?.includes("pmr") || profile.medical?.includes("pmr")) setFilters(f=>({...f,pmr:true}));
+            if (profile.health?.includes("postPartum") || profile.medical?.includes("postPartum")) setFilters(f=>({...f,postPartum:true}));
           }
         }}/>
       </>
@@ -3685,9 +3904,9 @@ export default function App() {
 
       {activeTab==="home" && <>
         <div className="hero">
-          <div className="hero-badge">Le nouveau TripAdvisor du sport</div>
+          <div className="hero-badge">La nouvelle façon de trouver ton sport</div>
           <h1>Match avec<br/><em>ton sport</em></h1>
-          <p>La plateforme qui centralise tous les clubs et assos sportifs des sports individuels d'Île-de-France. Trouve celui qui te correspond vraiment.</p>
+          <p>La plateforme qui centralise tous les clubs et assos sportives. Trouve celui qui te correspond vraiment.</p>
           <div className="search-wrap" style={{padding:"0 0 16px"}}>
             <div className="search-bar">
               <span className="search-ico">🔍</span>
@@ -3718,6 +3937,57 @@ export default function App() {
           </div>
         )}
 
+        {/* ── Clubs populaires de la semaine ── */}
+        <div style={{padding:"20px 20px 0",background:"var(--white)"}}>
+          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:14}}>
+            <div>
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:3}}>
+                <span style={{fontSize:18}}>🏆</span>
+                <span style={{fontSize:15,fontWeight:900,color:"var(--text)"}}>Populaires cette semaine</span>
+              </div>
+              <div style={{fontSize:11,color:"var(--text2)",fontWeight:500}}>Les clubs préférés de notre communauté</div>
+            </div>
+          </div>
+          <div style={{display:"flex",gap:12,overflowX:"auto",scrollbarWidth:"none",paddingBottom:16}}>
+            {CLUBS.filter(c=>c.trendBadge==="Populaire").slice(0,3).map((c,i)=>{
+              const medals = ["🥇","🥈","🥉"];
+              return (
+                <div key={c.id} onClick={()=>openClub(c)} style={{flexShrink:0,width:200,borderRadius:16,overflow:"hidden",border:"1px solid var(--border)",background:"var(--white)",cursor:"pointer",transition:"all .2s",boxShadow:"0 2px 12px rgba(0,0,0,0.06)"}}
+                  onMouseEnter={e=>e.currentTarget.style.transform="translateY(-3px)"}
+                  onMouseLeave={e=>e.currentTarget.style.transform="none"}>
+                  {/* Image */}
+                  <div style={{position:"relative",height:110,overflow:"hidden",background:`linear-gradient(135deg,${c.accentColor}dd,${c.accentColor}88)`}}>
+                    <img src={c.image} alt={c.name} style={{width:"100%",height:"100%",objectFit:"cover"}} onError={e=>{e.target.style.display="none"}}/>
+                    <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.5))"}}/>
+                    {/* Medal */}
+                    <div style={{position:"absolute",top:8,left:8,fontSize:22}}>{medals[i]}</div>
+                    {/* Sport badge */}
+                    <div style={{position:"absolute",bottom:8,left:8,background:"rgba(0,0,0,0.5)",backdropFilter:"blur(6px)",borderRadius:100,padding:"2px 8px",fontSize:10,fontWeight:700,color:"#fff"}}>
+                      {c.emoji} {c.sport}
+                    </div>
+                  </div>
+                  {/* Content */}
+                  <div style={{padding:"10px 12px"}}>
+                    <div style={{fontSize:12,fontWeight:800,color:"var(--text)",marginBottom:3,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{c.name}</div>
+                    <div style={{fontSize:10,color:"var(--text2)",marginBottom:8}}>📍 {c.city}</div>
+                    <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                      <div style={{display:"flex",alignItems:"center",gap:4}}>
+                        <span style={{fontSize:12}}>⭐</span>
+                        <span style={{fontSize:12,fontWeight:800,color:"var(--text)"}}>{c.rating}</span>
+                        <span style={{fontSize:10,color:"var(--text2)"}}>({c.reviews})</span>
+                      </div>
+                      <div style={{fontSize:11,fontWeight:700,color:"var(--tq)"}}>
+                        {c.type==="Association" ? `${c.priceMin}–${c.priceMax}€/an` : `${c.priceMin}€/${c.priceUnit}`}
+                      </div>
+                    </div>
+                    {c.essaiGratuit && <div style={{marginTop:6,fontSize:9,fontWeight:700,color:"var(--co)",background:"rgba(255,154,90,0.1)",borderRadius:100,padding:"2px 8px",display:"inline-block"}}>✓ Essai gratuit</div>}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
         <FilterBar filters={filters} setFilters={setFilters} activeFiltersCount={activeFiltersCount} onOpenDrawer={()=>setShowDrawer(true)} onResetFilters={()=>{setFilters(DEFAULT_FILTERS);setSearchQuery("");}}/>
 
         <div className="results-bar">
@@ -3738,8 +4008,8 @@ export default function App() {
         </div>
 
         {hasSearched && viewMode==="map" ? (
-          <MapView clubs={filtered} onOpenClub={openClub}/>
-        ) : filtered.length===0 ? (
+          <MapView clubs={sorted} onOpenClub={openClub}/>
+        ) : sorted.length===0 ? (
           <EmptyState
             filters={filters}
             searchQuery={searchQuery}
@@ -3753,9 +4023,9 @@ export default function App() {
         ) : (
           <>
             <div className="clubs-grid">
-              {filtered.slice(0, visibleCount).map((c,i)=><ClubCard key={c.id} club={c} isFav={favs.includes(c.id)} onFav={toggleFav} onClick={()=>openClub(c)} index={i}/>)}
+              {sorted.slice(0, visibleCount).map((c,i)=><ClubCard key={c.id} club={c} isFav={favs.includes(c.id)} onFav={toggleFav} onClick={()=>openClub(c)} index={i}/>)}
             </div>
-            {visibleCount < filtered.length && (
+            {visibleCount < sorted.length && (
               <div style={{padding:"0 20px 100px",textAlign:"center"}}>
                 <button
                   onClick={()=>setVisibleCount(v=>v+10)}
@@ -3765,14 +4035,14 @@ export default function App() {
                 >
                   <span style={{fontSize:16}}>🔍</span>
                   Chercher plus de clubs
-                  <span style={{background:"rgba(26,199,193,0.12)",color:"var(--tq)",borderRadius:100,padding:"2px 8px",fontSize:11,fontWeight:800}}>+{Math.min(10, filtered.length - visibleCount)}</span>
+                  <span style={{background:"rgba(26,199,193,0.12)",color:"var(--tq)",borderRadius:100,padding:"2px 8px",fontSize:11,fontWeight:800}}>+{Math.min(10, sorted.length - visibleCount)}</span>
                 </button>
                 <div style={{marginTop:8,fontSize:11,color:"var(--text2)"}}>
-                  {visibleCount} sur {filtered.length} clubs affichés
+                  {visibleCount} sur {sorted.length} clubs affichés
                 </div>
               </div>
             )}
-            {visibleCount >= filtered.length && filtered.length > 10 && (
+            {visibleCount >= sorted.length && sorted.length > 10 && (
               <div style={{padding:"8px 20px 100px",textAlign:"center",fontSize:12,color:"var(--text2)"}}>
                 ✅ Tous les clubs sont affichés
               </div>
