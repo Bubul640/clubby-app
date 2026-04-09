@@ -3535,6 +3535,7 @@ export default function App() {
     if (filters.abonnementMensuel && c.priceUnit !== "mois") return false;
     if (filters.abonnementAnnuel && c.priceUnit !== "an") return false;
     return true;
+  });
   const toMonthly = c => c.priceUnit === "an" ? c.priceMin/12 : c.priceUnit === "séance" ? c.priceMin*4 : c.priceMin;
   const sorted = [...filtered].sort((a,b) => {
     if (sort === "prix") return toMonthly(a) - toMonthly(b);
