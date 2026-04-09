@@ -734,7 +734,6 @@ function Onboarding({ onDone }) {
   const [sports, setSports] = useState([]);
   const [objective, setObjective] = useState(null);
   const [freq, setFreq] = useState(null);
-  const [health, setHealth] = useState([]);
 
   const total = 5;
 
@@ -2543,116 +2542,6 @@ function FilterBar({ filters, setFilters, activeFiltersCount, onOpenDrawer, onRe
           {openCat==="profil" && <div>
             <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Profil spécifique</div>
             <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-              <button className={`fchip${filters.pmr?" active":""}`} onClick={()=>setFilters(f=>({...f,pmr:!f.pmr}))}>♿ PMR</button>
-              <button className={`fchip${filters.postPartum?" active":""}`} onClick={()=>setFilters(f=>({...f,postPartum:!f.postPartum}))}>🤱 Post-partum</button>
-              <button className={`fchip${filters.womenOnly?" active":""}`} onClick={()=>setFilters(f=>({...f,womenOnly:!f.womenOnly}))}>💜 Women Only</button>
-              <button className={`fchip${filters.parentEnfant?" active":""}`} onClick={()=>setFilters(f=>({...f,parentEnfant:!f.parentEnfant}))}>👧 Parent/enfant</button>
-            </div>
-          </div>}
-
-          {openCat==="ambiance" && <div>
-            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Ambiance du club</div>
-            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-              {[["loisirs","🎉 Loisirs"],["performance","🏆 Performance"],["bien-être","☮️ Bien-être"]].map(([val,lbl])=>(
-                <button key={val} className={`fchip${filters.ambiance===val?" active":""}`} onClick={()=>{setFilters(f=>({...f,ambiance:f.ambiance===val?null:val}));setOpenCat(null);}}>{lbl}</button>
-              ))}
-            </div>
-          </div>}
-
-          <button onClick={()=>setOpenCat(null)} style={{position:"absolute",top:10,right:12,background:"none",border:"none",fontSize:16,cursor:"pointer",color:"var(--text2)"}}>✕</button>
-        </div>
-      )}
-    </div>
-  );
-}
-
-  return (
-    <div style={{background:"#fff",borderBottom:"1px solid var(--border)",position:"relative"}}>
-      {/* Pill bar */}
-      <div style={{display:"flex",gap:6,padding:"10px 16px",overflowX:"auto",scrollbarWidth:"none",alignItems:"center"}}>
-        <button className="filter-btn-sm" onClick={onOpenDrawer} style={{flexShrink:0}}>
-          ⚙️ {activeFiltersCount>0&&<span className="fcnt" style={{marginLeft:4}}>{activeFiltersCount}</span>}
-        </button>
-        {activeFiltersCount>0 && (
-          <button onClick={onResetFilters} style={{flexShrink:0,padding:"6px 12px",borderRadius:100,fontSize:11,fontWeight:700,background:"rgba(239,68,68,0.08)",border:"1.5px solid rgba(239,68,68,0.25)",color:"#EF4444",cursor:"pointer",whiteSpace:"nowrap",fontFamily:"var(--font)"}}>
-            ✕ Tout effacer
-          </button>
-        )}
-        <div style={{width:"1px",height:24,background:"var(--border)",flexShrink:0,margin:"0 2px"}}/>
-        {CATS.map(cat=>(
-          <button key={cat.id}
-            onClick={()=>toggle(cat.id)}
-            style={{flexShrink:0,padding:"6px 14px",borderRadius:"100px",fontSize:12,fontWeight:700,
-              background: cat.active ? "var(--tq)" : openCat===cat.id ? "var(--bg)" : "#fff",
-              border: `1.5px solid ${cat.active ? "var(--tq)" : openCat===cat.id ? "var(--tq)" : "var(--border)"}`,
-              color: cat.active ? "#fff" : openCat===cat.id ? "var(--tq)" : "var(--text2)",
-              cursor:"pointer",transition:"all .18s",display:"flex",alignItems:"center",gap:5,whiteSpace:"nowrap"
-            }}>
-            {cat.label}
-            <span style={{fontSize:10,opacity:.7,marginLeft:1}}>{openCat===cat.id?"▲":"▼"}</span>
-          </button>
-        ))}
-      </div>
-
-      {/* Dropdown panel */}
-      {openCat && (
-        <div style={{position:"absolute",top:"100%",left:0,right:0,background:"#fff",borderBottom:"2px solid var(--tq)",zIndex:150,padding:"12px 16px 16px",boxShadow:"0 8px 24px rgba(0,0,0,0.1)",animation:"fadeIn .15s ease"}}>
-
-          {openCat==="sport" && <div>
-            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Sport pratiqué</div>
-            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-              {SPORTS.slice(1).map(s=>(
-                <button key={s} className={`fchip${filters.sport===s?" active":""}`} onClick={()=>{setFilters(f=>({...f,sport:f.sport===s?"Tous":s}));setOpenCat(null);}}>{s}</button>
-              ))}
-            </div>
-          </div>}
-
-          {openCat==="ville" && <div>
-            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Localisation</div>
-            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-              {CITIES.slice(1).map(c=>(
-                <button key={c} className={`fchip${filters.city===c?" active":""}`} onClick={()=>{setFilters(f=>({...f,city:f.city===c?"Toutes":c}));setOpenCat(null);}}>{c}</button>
-              ))}
-            </div>
-          </div>}
-
-          {openCat==="abonnement" && <div style={{display:"flex",flexDirection:"column",gap:12}}>
-            <div>
-              <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Tarifs & abonnements</div>
-              <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-                {[
-                  ["essaiGratuit","✓ Essai gratuit"],
-                  ["tarifEtudiant","🎓 Tarif étudiant"],
-                  ["tarifSenior","👴 Tarif sénior"],
-                  ["tarifFamille","👨‍👩‍👧 Tarif famille"],
-                  ["abonnementMensuel","📅 Abonnement mensuel"],
-                  ["abonnementAnnuel","📆 Abonnement annuel"],
-                ].map(([k,l])=>(
-                  <button key={k} className={`fchip${filters[k]?" active":""}`} onClick={()=>setFilters(f=>({...f,[k]:!f[k]}))}>{l}</button>
-                ))}
-              </div>
-            </div>
-            <div>
-              <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:6}}>Budget max · {filters.budget===500?"Illimité":`${filters.budget}€/mois`}</div>
-              <input type="range" min={0} max={500} step={10} value={filters.budget} onChange={e=>setFilters(f=>({...f,budget:Number(e.target.value)}))} style={{width:"100%"}}/>
-            </div>
-          </div>}
-
-          {openCat==="enseignement" && <div>
-            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Niveau & encadrement</div>
-            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-              <button className={`fchip${filters.coachPerso?" active":""}`} onClick={()=>setFilters(f=>({...f,coachPerso:!f.coachPerso}))}>💪 Coach perso</button>
-              {LEVELS_LIST.map(l=>(
-                <button key={l} className={`fchip${filters.levels.includes(l)?" active":""}`} onClick={()=>setFilters(f=>({...f,levels:f.levels.includes(l)?f.levels.filter(x=>x!==l):[...f.levels,l]}))}>{l}</button>
-              ))}
-            </div>
-          </div>}
-
-          {openCat==="lieu" && <div>
-            <div style={{fontSize:10,fontWeight:700,color:"var(--text2)",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>Lieu & profil spécifique</div>
-            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-              <button className={`fchip${filters.indoor===true?" active":""}`} onClick={()=>setFilters(f=>({...f,indoor:f.indoor===true?null:true}))}>🏠 Indoor</button>
-              <button className={`fchip${filters.indoor===false?" active":""}`} onClick={()=>setFilters(f=>({...f,indoor:f.indoor===false?null:false}))}>🌳 Outdoor</button>
               <button className={`fchip${filters.pmr?" active":""}`} onClick={()=>setFilters(f=>({...f,pmr:!f.pmr}))}>♿ PMR</button>
               <button className={`fchip${filters.postPartum?" active":""}`} onClick={()=>setFilters(f=>({...f,postPartum:!f.postPartum}))}>🤱 Post-partum</button>
               <button className={`fchip${filters.womenOnly?" active":""}`} onClick={()=>setFilters(f=>({...f,womenOnly:!f.womenOnly}))}>💜 Women Only</button>
